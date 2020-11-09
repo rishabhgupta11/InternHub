@@ -1,0 +1,409 @@
+body{
+    background-color: #2e2d30;
+    color: #1c74bc;
+}
+
+hr{
+    background-color: #303030;
+    margin: 0px;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  margin-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #f5f5f5;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #0f8899;
+}
+
+.openbtn {
+  cursor: pointer;
+  background-color:black;
+  border: none;
+}
+
+.openbtn:focus{
+    outline:none;
+}
+
+.sidebarBottomMenu{
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+    position:absolute;
+    bottom:100px;
+}
+
+.sidebarBottomMenu > a{
+    border: 2px solid black;
+    border-radius: 0.25rem;
+}
+
+.sidebarBottomMenu > a:hover{
+    background-color: #f5f5f5;
+    color: black;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar{
+      padding-top: 15px;
+  }
+  .sidebar a{
+      font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 1024px){
+    .navbar-burger-menu-div{
+        display: none;
+    }
+}
+
+#header{
+    top: 0;
+    z-index: 9999;
+    position: fixed;
+    padding: 0px;
+    background-color: black;
+}
+
+.navbar{
+    -webkit-box-shadow: 0px 5px 5px -2px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 5px 5px -2px rgba(0,0,0,0.5);
+    box-shadow: 0px 5px 5px -2px rgba(0,0,0,0.5);
+}
+
+nav div a{
+    font-family: "Didact Gothic";
+    text-decoration: none !important;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block;
+    color: #f5f5f5;
+}
+
+nav div a:hover{
+    font-family: "Didact Gothic";
+    color: #0f8899;
+    text-decoration: none !important;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.nav-link {
+    padding-right: .5rem;
+    padding-left: .5rem;
+}
+
+.headerOption{
+    font-size:13px;
+    font-family: 'Didact Gothic';
+    letter-spacing:1px;
+}
+
+.navbar-brand{
+    justify-content: center;
+    margin-right:0px;
+}
+
+.nav-item{
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.login > span{
+    color: #f5f5f5;
+}
+
+.login > span:hover{
+    color: #0f8899;
+}
+
+.logout{
+    margin-left:40px;
+}
+
+.home-banner{
+    margin-top: 60px;
+}
+
+.home-banner-content{
+    padding-top: 5%;
+    text-align: center;
+    color: #1c74bc;
+    background-color: #111111;
+    font-family: "Tinos";
+}
+
+.home-banner-2{
+    background-color: #1c74bc;
+    text-align: center;
+    color: #111111;
+}
+
+.getStarted{
+    letter-spacing:3px;
+    font-size:15px;
+    background-color: black;
+    border: 2px solid black;
+    color: #1c74bc;
+    padding: 10px 20px;
+    border-radius: 200px;
+    transition-duration: 0.4s;
+}
+
+.getStarted:focus{
+    outline: none;
+}
+
+.getStarted:hover{
+    background-color: #1c74bc;
+    color: black;
+    transition-duration: 0.4s;
+    border: 2px solid #1c74bc;
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+}
+
+.home-desc{
+    background-color: #111111;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+@media only screen and (max-width: 565px){
+    #bannerForDesktop{
+        display: none;
+    }
+    
+    .logout{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 566px){
+    #bannerForMobile{
+        display: none;
+    }
+}
+
+#footer{
+    position: relative;
+    bottom:0;
+}
+
+footer{
+    padding: 10px 0;
+    background-color: black;
+    color:#f5f5f5;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-heading{
+    margin-top: 30px;
+    font-family: 'Didact Gothic';
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 18px;
+    color: #1c74bc;
+}
+
+.footer-text{
+    font-family: 'Didact Gothic';
+    color: #f5f5f5;
+    text-decoration:none !important;
+}
+
+.footer-text > div > a{
+    color: #f5f5f5;
+    text-decoration:none !important;
+}
+
+.footer-text > div > a:hover {
+    color: #0f8899;
+    text-decoration: underline; 
+    cursor:pointer;  
+}
+
+.signupdiv{
+    cursor:pointer;
+    background-color: black;
+    width:300px;
+    height:48px;
+    transition-duration: 0.4s;
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.3);
+}
+.signupdiv:hover{
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.5);
+    transition-duration: 0.4s;
+}
+
+.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#banner-signup{
+    background-color: #f8f8f8;
+}
+
+#Signup{
+    font-family: 'Didact Gothic';
+    color: #000000;
+    position:relative;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    margin-top: 60px;
+}
+
+.forgotpassword{
+    margin-bottom: 3px;
+}
+
+.forgot-password{
+    padding-left: 5px;
+    margin-bottom: 20px;
+}
+
+.forgot-password > a{
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: underline;
+    font-family:'Didact Gothic';
+    cursor: pointer;
+    color:#000000;
+}
+.forgot-password > a:hover{
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: underline;
+    font-family:'Didact Gothic';
+    cursor: pointer;
+    color: #0f8899;
+}
+
+.create-acc{
+    color: #000000;
+    font-size:20px;
+    font-weight:900;
+    font-family:"Didact Gothic";
+    letter-spacing:3px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.or-login-with{
+    display: flex;
+    justify-content:space-around;
+}
+
+.button1 {
+  display: inline-block;
+  border-radius: 2px;
+  background-color: #000000;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 3px;
+  padding: 20px;
+  width: 98%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button1:hover span {
+  padding-right: 25px;
+}
+
+.button1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.stayintouch{
+    padding: 5px;
+    font-size: 14px;
+    width: 100%;
+    background-color: #f5f5f5;
+    border: none;
+    border-bottom: 1px solid black;
+}
+.stayintouch:focus{
+    outline: none;
+}
+
+.button10 {
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-family: 'Didact Gothic';
+}
+.button105 {
+    background-color: black;
+    color: #f5f5f5;
+    border: 2px solid black;
+}
+
+.button105:hover {
+    background-color: #f5f5f5;
+    color: black;
+    border: 2px solid black;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
