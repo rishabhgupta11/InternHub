@@ -6,14 +6,6 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-function add_account()
-{
-    $password = md5($password_1);
-    $query = "INSERT INTO user (Name, Email, Password) VALUES('$name', '$email', '$password')";
-    mysqli_query($con, $query);
-    $_SESSION['email'] = $email;
-    header('location: ../home/index.php');
-}
 
 if (isset($_REQUEST['reg_user'])) 
 {
@@ -36,10 +28,10 @@ if (isset($_REQUEST['reg_user']))
             $mail->isSMTP();                             
             $mail->Host = "smtp.hostinger.in";
             $mail->SMTPAuth = true;             
-            $mail->Username = "noreply-internhub@ngenza.com";                 
+            $mail->Username = "no-reply@internhub.ngenza.com";                 
             $mail->Password = "ASEProjectInternHub1";  
             $mail->Port = 587;  
-            $mail->From = "noreply-internhub@ngenza.com";
+            $mail->From = "no-reply@internhub.ngenza.com";
             $mail->FromName = "InternHub";
             $mail->addAddress("$email", "$name");
             $mail->isHTML(true);
@@ -128,10 +120,29 @@ if (isset($_REQUEST['login_user']))
     $password = md5($password1);
     $query = "SELECT * FROM user WHERE Email='$email' AND Password='$password'";
     $results = mysqli_query($con, $query);
+    $row = mysqli_fetch_array($results);
     if(mysqli_num_rows($results) == 1) 
     {
         $_SESSION['email'] = $email;
-        header('location: ../home/index.php');
+        if($row['Type'] == 'Student')
+        {
+        ?>
+            <script>
+                location.href = "../student/browse.php";
+            </script>
+        <?php
+        }
+        else
+        {
+            if($row['Type'] == 'Company')
+            {
+            ?>
+                <script>
+                    location.href = "../company/applications.php";
+                </script>
+            <?php
+            }
+        }
     }
     else
     {

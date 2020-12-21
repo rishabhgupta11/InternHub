@@ -13,10 +13,17 @@
                 <a href="https://ngenza.com/home/terms-of-service.php">Terms of Use</a><br>
                 <a href="https://ngenza.com/home/privacy-policy.php">Privacy Policy</a><br>
             </div>
+            <?php
+            if(!isset($_SESSION['email']))
+            {
+            ?>
             <div class="col-md">
                 <p class="footer-heading">LET US HELP YOU</p>
                 <a href="../home/login.php">Login</a>
             </div>
+            <?php
+            }
+            ?>
         </div>
     </div>
     <br>

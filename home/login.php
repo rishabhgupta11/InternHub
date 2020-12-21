@@ -19,7 +19,30 @@
     </head>
     <body>
         <?php
-        include("../includes/header.php");
+        if(!isset($_SESSION['email']))
+        {
+            include("../includes/header.php");
+        }
+        else
+        {    
+            $email = $_SESSION['email'];
+            $query1 = "SELECT Type FROM user WHERE Email='$email'";
+            $result1 = mysqli_query($con, $query1);
+            $row1 = mysqli_fetch_array($result1);
+            $type = $row1['Type'];
+
+            if(isset($_SESSION['email']) && $type=="Student")
+            {
+                include("../includes/header-2.php");
+            }
+            else
+            {
+                if(isset($_SESSION['email']) && $type=="Company")
+                {
+                    include("../includes/header-3.php");
+                }
+            }
+        }
         ?>
         <div>
             <div id="banner-signup">
@@ -147,6 +170,7 @@
                 </div>  
             </div>
         </div> 
+        
         <div id="footer">
         <?php
         include("../includes/footer.php");

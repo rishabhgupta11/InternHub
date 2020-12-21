@@ -48,12 +48,12 @@ if(isset($_GET["code"]))
             $query = "INSERT INTO user (Name, Email, Type) VALUES('$name', '$emailid', 'Student')";
             mysqli_query($con, $query);
             $_SESSION['email'] = $emailid;
-            header('location: ../home/index.php');
+            header('location: ../student/browse.php');
         }
         else
         {
             $_SESSION['email'] = $emailid;
-            header('location: ../home/index.php');
+            header('location: ../student/browse.php');
         }
     }
 }

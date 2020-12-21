@@ -8,6 +8,7 @@
 ?>    
 <?php
     $confirm = "";
+    $type = "";
     if(isset($_REQUEST['confirmOTP'])) 
     {
         $name = $_SESSION['prov_name'];
@@ -26,10 +27,10 @@
             $mail->isSMTP();                             
             $mail->Host = "smtp.hostinger.in";
             $mail->SMTPAuth = true;             
-            $mail->Username = "noreply-internhub@ngenza.com";                 
+            $mail->Username = "no-reply@internhub.ngenza.com";                 
             $mail->Password = "ASEProjectInternHub1";  
             $mail->Port = 587;  
-            $mail->From = "noreply-internhub@ngenza.com";
+            $mail->From = "no-reply@internhub.ngenza.com";
             $mail->FromName = "InternHub";
             $mail->addAddress("$email", "$name");
             $mail->isHTML(true);
@@ -89,11 +90,25 @@
             {
                 if($confirm == "OTP Matched!")
                 {
-            ?>
-                    <script>
-                        location.href = "../home/index.php";
-                    </script>
-            <?php
+                    if($type == 'Student')
+                    {
+                    ?>
+                        <script>
+                            location.href = "../student/browse.php";
+                        </script>
+                    <?php
+                    }
+                    else
+                    {
+                        if($type == 'Company')
+                        {
+                        ?>
+                            <script>
+                                location.href = "../company/applications.php";
+                            </script>
+                        <?php
+                        }
+                    }
                 }
             }
             ?>

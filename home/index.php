@@ -1,5 +1,7 @@
 <?php
     include("../includes/fetch_css.php");
+    require("../includes/connect.php");
+    require("../includes/connect2.php");
 ?>    
 <html>
     <head>
@@ -17,7 +19,30 @@
     </head>
     <body>
         <?php
-        include("../includes/header.php");
+        if(!isset($_SESSION['email']))
+        {
+            include("../includes/header.php");
+        }
+        else
+        {    
+            $email = $_SESSION['email'];
+            $query1 = "SELECT Type FROM user WHERE Email='$email'";
+            $result1 = mysqli_query($con, $query1);
+            $row1 = mysqli_fetch_array($result1);
+            $type = $row1['Type'];
+
+            if(isset($_SESSION['email']) && $type=="Student")
+            {
+                include("../includes/header-2.php");
+            }
+            else
+            {
+                if(isset($_SESSION['email']) && $type=="Company")
+                {
+                    include("../includes/header-3.php");
+                }
+            }
+        }
         ?>
         
         <div class="container-fluid" style="padding:0px;">
@@ -39,7 +64,6 @@
                     <h5 style="font-family:'Didact Gothic';">Bridging the gap between employers and students.</h5>
                 </div>
             </div>
-            <br>
             <div class="container-fluid home-banner-2">
                 <br>
                 <br>
@@ -53,7 +77,6 @@
                 <br>
                 <br>
             </div>
-            <br>
             <div class="container-fluid home-desc">
                 <div class="row">
                     <div class="col-md-6 col-xs-12" style="padding:30px;">
@@ -88,7 +111,6 @@
                     </div>
                 </div>
             </div>
-            <br>
         </div>
         
         <div id="footer">

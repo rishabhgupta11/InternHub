@@ -33,10 +33,10 @@ if(isset($_SESSION['reset_password']))
                 $mail->isSMTP();                             
                 $mail->Host = "smtp.hostinger.in";
                 $mail->SMTPAuth = true;             
-                $mail->Username = "noreply-internhub@ngenza.com";                 
+                $mail->Username = "no-reply@internhub.ngenza.com";                 
                 $mail->Password = "ASEProjectInternHub1";  
                 $mail->Port = 587;  
-                $mail->From = "noreply-internhub@ngenza.com";
+                $mail->From = "no-reply@internhub.ngenza.com";
                 $mail->FromName = "InternHub";
                 $mail->addAddress("$email", "$name");
                 $mail->isHTML(true);
@@ -69,7 +69,7 @@ if(isset($_SESSION['reset_password']))
             {
             ?>
                 <script>
-                    if(confirm("Something went wrong. Please try again."))
+                    if(confirm("New Password cannot be an Old Password. Please try again."))
                     {
                         location.href = "../home/login.php";
                     }
