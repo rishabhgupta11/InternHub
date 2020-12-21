@@ -10,8 +10,8 @@
             <div class="col-md offset-md-2">
                 <p class="footer-heading">GET TO KNOW US</p>
                 <a href="../home/about.php">About</a><br>
-                <a href="https://ngenza.com/home/terms-of-service.php">Terms of Use</a><br>
-                <a href="https://ngenza.com/home/privacy-policy.php">Privacy Policy</a><br>
+                <a href=" ">Terms of Use</a><br>
+                <a href=" ">Privacy Policy</a><br>
             </div>
             <?php
             if(!isset($_SESSION['email']))
@@ -30,7 +30,7 @@
     <br>
     <div class="container">
         <center>
-            <p style="font-size:13px;">Contact Us: contact-internhub@ngenza.com | &copy; 2020 InternHub. All Rights Reserved.</p>
+            <p style="font-size:13px;">&copy; 2020 InternHub. All Rights Reserved.</p>
         </center>
     </div>
 </footer>
