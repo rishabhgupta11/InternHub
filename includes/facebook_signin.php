@@ -61,7 +61,7 @@ else
  // Get login url
     $facebook_permissions = ['email']; // Optional permissions
 
-    $facebook_login_url = $facebook_helper->getLoginUrl('http://localhost/ngenza/InternHub/includes/facebook_signin.php', $facebook_permissions);
+    $facebook_login_url = $facebook_helper->getLoginUrl('http://redirect_URI/includes/facebook_signin.php', $facebook_permissions);
     
     // Render Facebook login button
     $facebook_login_but = '<a href="'.$facebook_login_url.'"><img src="../images/facebook-signin.png" style="width:40px;"></a>';
