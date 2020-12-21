@@ -30,4 +30,4 @@
 * Install PHPMailer, Dompdf, Google, Facebook Graph SDK libraries using composer.
 * Change/Add database values in "connect.php" & "connect2.php" files in _includes_ folder.
 * Create App in Google and Facebook developer accounts and add app id, app secret and redirect URI in "google_config.php", "google_signin.php", "facebook_config.php" & "facebook_signin.php".
-
+* Add SMTP account username and password wherever PHPMailer object is used.
