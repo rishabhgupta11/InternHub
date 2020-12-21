@@ -9,13 +9,13 @@ require_once '../../vendor/autoload.php';
 $google_client = new Google_Client();
 
 //Set the OAuth 2.0 Client ID
-$google_client->setClientId('935813392879-agntdcgqgos3crj4tjaj71jsoh9dsu5h.apps.googleusercontent.com');
+$google_client->setClientId(' ');
 
 //Set the OAuth 2.0 Client Secret key
-$google_client->setClientSecret('cO-73ikDAX9urjf5U_SvmmUW');
+$google_client->setClientSecret(' ');
 
 //Set the OAuth 2.0 Redirect URI
-$google_client->setRedirectUri('http://localhost/ngenza/InternHub/includes/google_signin.php');
+$google_client->setRedirectUri('http://redirect_URI/includes/google_signin.php');
 
 //
 $google_client->addScope('email');
