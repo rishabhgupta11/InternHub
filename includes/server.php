@@ -28,10 +28,10 @@ if (isset($_REQUEST['reg_user']))
             $mail->isSMTP();                             
             $mail->Host = "smtp.hostinger.in";
             $mail->SMTPAuth = true;             
-            $mail->Username = "no-reply@internhub.ngenza.com";                 
-            $mail->Password = "ASEProjectInternHub1";  
+            $mail->Username = " ";                 
+            $mail->Password = " ";  
             $mail->Port = 587;  
-            $mail->From = "no-reply@internhub.ngenza.com";
+            $mail->From = " ";
             $mail->FromName = "InternHub";
             $mail->addAddress("$email", "$name");
             $mail->isHTML(true);
