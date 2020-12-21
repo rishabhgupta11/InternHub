@@ -1,5 +1,5 @@
 <?php
-    $conn = new mysqli("localhost","root","4b86XcMhd8PHQi3d","internhub");
+    $conn = new mysqli(" "," "," "," ");
     if($conn->connect_error){
         die("Connection Failed!".$conn->connect_error);
     }
